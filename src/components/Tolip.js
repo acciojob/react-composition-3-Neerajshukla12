@@ -4,20 +4,17 @@ const Tooltip = ({ text, children }) => {
   const [show, setShow] = useState(false);
 
   return (
-    <div
+    <h2
       className="tooltip"
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
       style={{ position: "relative", display: "inline-block" }}
     >
-      <h2>{children}</h2>
+      {children}
 
       {show && (
-        <p
-          className="tooltiptext"
+        <div
           style={{
-            color:"white",
-            fontSize:"50px",
             position: "absolute",
             bottom: "100%",
             left: "50%",
@@ -30,10 +27,10 @@ const Tooltip = ({ text, children }) => {
             zIndex: 1,
           }}
         >
-         <h2> {text}    </h2>
-        </p>
+          {text}
+        </div>
       )}
-    </div>
+    </h2>
   );
 };
 
