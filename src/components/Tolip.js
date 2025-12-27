@@ -10,10 +10,10 @@ const Tooltip = ({ text, children }) => {
       onMouseLeave={() => setShow(false)}
       style={{ position: "relative", display: "inline-block" }}
     >
-      {children}
+      <h2>{children}</h2>
 
       {show && (
-        <span
+        <p
           className="tooltiptext"
           style={{
             color:"white",
@@ -30,8 +30,8 @@ const Tooltip = ({ text, children }) => {
             zIndex: 1,
           }}
         >
-          {text}
-        </span>
+         <h2> {text}    </h2>
+        </p>
       )}
     </div>
   );
