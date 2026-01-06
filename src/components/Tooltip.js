@@ -30,7 +30,7 @@ const Tooltip = ({ text, children }) => {
               zIndex: 1,
             }}
           >
-            {text}
+            <p>{text}</p>
           </p>
         )}
       </ul>
