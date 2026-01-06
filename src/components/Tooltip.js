@@ -2,9 +2,7 @@ import React, { useState } from "react";
 
 const Tooltip = ({ text, children }) => {
   const [show, setShow] = useState(false);
-
   const child = React.Children.only(children);
-
   return React.cloneElement(child, {
     className: "tooltip",
     onMouseEnter: () => setShow(true),
@@ -16,9 +14,9 @@ const Tooltip = ({ text, children }) => {
     },
     children: (
       <ul>
-        {child.props.children}
+        <h2>{child.props.children}</h2>
         {show && (
-          <div
+          <p
             style={{
               position: "absolute",
               bottom: "100%",
@@ -33,7 +31,7 @@ const Tooltip = ({ text, children }) => {
             }}
           >
             {text}
-          </div>
+          </p>
         )}
       </ul>
     ),
