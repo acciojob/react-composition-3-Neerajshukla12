@@ -11,7 +11,7 @@ const App = () => {
       <Tooltip text="This is a tooltip">
         <h2>Hover over me</h2>
       </Tooltip>
-      <hr style={{ width: "60%", margin: "40px auto" }} />
+      <hr style={{ width: "65%", margin: "40px auto" }} />
        <Tooltip text="This is a  another tooltip">
         <p>Hover over me to see another tooltip</p>
       </Tooltip>
